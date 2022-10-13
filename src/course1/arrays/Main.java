@@ -1,5 +1,7 @@
 package course1.arrays;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
        runHomeWork1Task1();
@@ -17,7 +19,9 @@ public class Main {
         arr1 [0] = 1;
         arr1 [1] = 2;
         arr1 [2] = 3;
+
         double [] arr2 = {1.57, 7.654, 9.986};
+
         int [] arr3 = {1, 2, 3, 4, 5, 6, 7};
     }
     public static void runHomeWork1Task2() {
@@ -29,13 +33,30 @@ public class Main {
         arr1 [0] = 1;
         arr1 [1] = 2;
         arr1 [2] = 3;
-        System.out.printf(arr1[0] + ", " + arr1[1] + ", " + arr1[2]);
+        for (int i = 0; i < arr1.length; i++) {
+            System.out.print(arr1[i]);
+            if (i != arr1.length - 1) {
+                System.out.print(", ");
+            }
+        }
         System.out.println();
+
         double [] arr2 = {1.57, 7.654, 9.986};
-        System.out.printf(arr2[0] + ", " + arr2[1] + ", " + arr2[2]);
+        for (int i = 0; i < arr2.length; i++) {
+            System.out.print(arr2[i]);
+            if (i != arr2.length - 1) {
+                System.out.print(", ");
+            }
+        }
         System.out.println();
+
         int [] arr3 = {1, 2, 3, 4, 5, 6};
-        System.out.printf(arr3[0] + ", " + arr3[1] + ", " + arr3[2] + ", " + arr3[3] + ", " + arr3[4] + ", " + arr3[5]);
+        for (int i = 0; i < arr3.length; i++) {
+            System.out.print(arr3[i]);
+            if (i != arr3.length - 1) {
+                System.out.print(", ");
+            }
+        }
         System.out.println();
     }
     public static void runHomeWork1Task3() {
@@ -48,13 +69,30 @@ public class Main {
         arr1 [0] = 1;
         arr1 [1] = 2;
         arr1 [2] = 3;
-        System.out.printf(arr1[2] + ", " + arr1[1] + ", " + arr1[0]);
+        for (int i = arr1.length - 1; i >= 0 ; i--) {
+            System.out.print(arr1[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
+        }
         System.out.println();
+
         double [] arr2 = {1.57, 7.654, 9.986};
-        System.out.printf(arr2[2] + ", " + arr2[1] + ", " + arr2[0]);
+        for (int i = arr2.length - 1; i >= 0 ; i--) {
+            System.out.print(arr2[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
+        }
         System.out.println();
+
         int [] arr3 = {1, 2, 3, 4, 5, 6};
-        System.out.printf(arr3[5] + ", " + arr3[4] + ", " + arr3[3] + ", " + arr3[2] + ", " + arr3[1] + ", " + arr3[0]);
+        for (int i = arr3.length - 1; i >= 0 ; i--) {
+            System.out.print(arr3[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
+        }
         System.out.println();
     }
     public static void runHomeWork1Task4() {
@@ -68,15 +106,12 @@ public class Main {
         arr1 [0] = 1;
         arr1 [1] = 2;
         arr1 [2] = 3;
-        int i = 0;
-        for (; i < 3; i++) {
-            if (arr1[i] % 2 == 0) {
-                System.out.println(arr1[i]);
-            }
-            else {
-                arr1 [i] = arr1 [i] + 1;
-                System.out.println(arr1[i]);
+
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i] % 2 != 0) {
+                arr1 [i] += 1;
             }
         }
+        System.out.println(Arrays.toString(arr1)); //Не проходили этого, взяла из разбора ДЗ
     }
 }
